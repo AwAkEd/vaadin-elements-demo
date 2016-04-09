@@ -1,5 +1,6 @@
 require 'sinatra'
 
 get '/' do
-  'My name is Sinatra and welcome to web apps.'
+  @hello = 'My name is Sinatra and welcome to web apps.'
+  erb :index
 end
