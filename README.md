@@ -18,3 +18,6 @@ In this step we import `vaadin-elements` gem and put empty Elements in the view.
 
 # Step 6
 Here we set up two combo-boxes with predefined data and assign them ids.
+
+# Step 7
+We set up the third combo-box and use custom label and value for the items.

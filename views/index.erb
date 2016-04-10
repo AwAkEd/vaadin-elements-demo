@@ -12,7 +12,7 @@
   <ul>
     <li><%= vaadin_combo_box @types, id: 'card-type' %></li>
     <li><%= vaadin_combo_box @cmcs, id: 'cmc' %></li>
-    <li><%= vaadin_combo_box %></li>
+    <li><%= vaadin_combo_box @sets, id: 'sets', item_value_path: 'code', item_label_path: 'name' %></li>
   </ul>
 </section>
 <section id="filters">
