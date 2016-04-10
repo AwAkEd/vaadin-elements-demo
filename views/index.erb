@@ -10,8 +10,8 @@
 <section id="criteria">
   <header>Search MtG cards</header>
   <ul>
-    <li><%= vaadin_combo_box %></li>
-    <li><%= vaadin_combo_box %></li>
+    <li><%= vaadin_combo_box @types, id: 'card-type' %></li>
+    <li><%= vaadin_combo_box @cmcs, id: 'cmc' %></li>
     <li><%= vaadin_combo_box %></li>
   </ul>
 </section>

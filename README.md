@@ -15,3 +15,6 @@ We introduce `Gemfile` and make the app runnable through `Rack`. Also, we import
 
 # Step 5
 In this step we import `vaadin-elements` gem and put empty Elements in the view.
+
+# Step 6
+Here we set up two combo-boxes with predefined data and assign them ids.
