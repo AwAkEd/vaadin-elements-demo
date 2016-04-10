@@ -2,9 +2,33 @@
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Vaadin Elements demo</title>
+  <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen"/>
+  <title>MtG Elemental Card Search</title>
 </head>
 <body>
-<p><%= @hello %></p>
+<section id="criteria">
+  <header>Search MtG cards</header>
+  <ul>
+    <li>CARD TYPE</li>
+    <li>CONVERTED MANA COST</li>
+    <li>EXPANSION (total <%= @sets.size %>)</li>
+  </ul>
+</section>
+<section id="filters">
+  <header>Current criteria</header>
+  <ul>
+    <li>No search criteria active. Showing all cards.</li>
+  </ul>
+</section>
+<section id="results">
+  <header>Cards matching your selection</header>
+  <p>Your current search would show <strong><%= @cards.size %></strong> results.</p>
+</section>
+<section id="footer">
+  <footer>
+    This website displays data that is Copyright © Wizards of the Coast - All Rights Reserved. This website is not
+    affiliated with Wizards of the Coast in any way.
+  </footer>
+</section>
 </body>
 </html>

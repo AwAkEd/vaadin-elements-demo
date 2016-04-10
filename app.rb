@@ -1,6 +1,10 @@
 require 'sinatra'
+require 'json'
+
+before do
+  @cards, @sets = %w{AllCards SetList}.collect { |filename| JSON.parse(File.read("#{filename}.json")) }
+end
 
 get '/' do
-  @hello = 'My name is Sinatra and welcome to web apps.'
   erb :index
 end
