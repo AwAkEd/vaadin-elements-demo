@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8"/>
   <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen"/>
+  <%= import_vaadin_elements %>
   <title>MtG Elemental Card Search</title>
 </head>
 <body>
 <section id="criteria">
   <header>Search MtG cards</header>
   <ul>
-    <li>CARD TYPE</li>
-    <li>CONVERTED MANA COST</li>
-    <li>EXPANSION (total <%= @sets.size %>)</li>
+    <li><%= vaadin_combo_box %></li>
+    <li><%= vaadin_combo_box %></li>
+    <li><%= vaadin_combo_box %></li>
   </ul>
 </section>
 <section id="filters">
@@ -23,6 +24,7 @@
 <section id="results">
   <header>Cards matching your selection</header>
   <p>Your current search would show <strong><%= @cards.size %></strong> results.</p>
+  <%= vaadin_grid %>
 </section>
 <section id="footer">
   <footer>
