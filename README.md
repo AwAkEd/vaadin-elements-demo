@@ -21,3 +21,6 @@ Here we set up two combo-boxes with predefined data and assign them ids.
 
 # Step 7
 We set up the third combo-box and use custom label and value for the items.
+
+# Step 8
+We enable sessions, make combo-boxes immediate and capture their events.
