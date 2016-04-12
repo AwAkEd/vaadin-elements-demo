@@ -24,3 +24,6 @@ We set up the third combo-box and use custom label and value for the items.
 
 # Step 8
 We enable sessions, make combo-boxes immediate and capture their events.
+
+# Step 9
+The response from the immediate event is displayed in a grid.

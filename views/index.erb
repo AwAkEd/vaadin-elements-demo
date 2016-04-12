@@ -10,21 +10,21 @@
 <section id="criteria">
   <header>Search MtG cards</header>
   <ul>
-    <li><%= vaadin_combo_box @types, id: 'card-type', immediate: '/update' %></li>
-    <li><%= vaadin_combo_box @cmcs, id: 'cmc', immediate: '/update' %></li>
-    <li><%= vaadin_combo_box @sets, id: 'sets', item_value_path: 'code', item_label_path: 'name', immediate: '/update' %></li>
+    <li><%= vaadin_combo_box @types, id: 'card-type', immediate: '/update', use_callback: true %></li>
+    <li><%= vaadin_combo_box @cmcs, id: 'cmc', immediate: '/update', use_callback: true %></li>
+    <li><%= vaadin_combo_box @sets, id: 'sets', item_value_path: 'code', item_label_path: 'name', immediate: '/update', use_callback: true %></li>
   </ul>
 </section>
 <section id="filters">
   <header>Current criteria</header>
   <ul>
-    <li>No search criteria active. Showing all cards.</li>
+    <li id="active">No search criteria active. Showing all cards.</li>
   </ul>
 </section>
 <section id="results">
   <header>Cards matching your selection</header>
-  <p>Your current search would show <strong><%= @cards.size %></strong> results.</p>
-  <%= vaadin_grid %>
+  <p>Your current search matches <strong id="size"><%= @cards.size %></strong> results.</p>
+  <%= vaadin_grid [], id: 'grid', column_names: %w{name manaCost type} %>
 </section>
 <section id="footer">
   <footer>

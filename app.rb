@@ -31,9 +31,11 @@ post '/update' do
   end
 
   # from cards, select
-  matching = @cards.select { |name, data| session[:filters].all? { |type, values| values.empty? || data[type].nil? || (data[type].is_a?(Array) && values.any? { |v| data[type].include?(v) }) || values.any? { |v| data[type].to_s == v.to_s } } }
-
+  matching = @cards.select { |name, data| !name.include?("token card") && session[:filters].all? { |type, values| values.empty? || data[type].nil? || (data[type].is_a?(Array) && values.any? { |v| data[type].include?(v) }) || values.any? { |v| data[type].to_s == v.to_s } } }
   puts "Current filters: #{session[:filters].inspect} would select #{matching.size} cards."
+
+  content_type 'application/json', charset: 'utf-8'
+  {grid: {items: matching.values}, size: {innerHTML: matching.size}, active: {innerHTML: session[:filters].inspect}}.to_json
 end
 
 get '/' do
