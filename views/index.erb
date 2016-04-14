@@ -24,7 +24,7 @@
 <section id="results">
   <header>Cards matching your selection</header>
   <p>Your current search matches <strong id="size"><%= @cards.size %></strong> results.</p>
-  <%= vaadin_grid [], id: 'grid', column_names: %w{name manaCost type} %>
+  <%= vaadin_grid id: 'grid', column_names: %w{name manaCost type}, lazy_load: '/cards', size: 6 %>
 </section>
 <section id="footer">
   <footer>
