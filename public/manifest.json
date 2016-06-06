@@ -1,0 +1,8 @@
+{
+  "name": "Elemental MtG card search",
+  "short_name": "Elemental MtG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fefefe",
+  "theme_color": "#0000ff"
+}
