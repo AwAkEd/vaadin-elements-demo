@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/vaadin-miki/vaadin-elements.git
-  revision: 692442e5f71ba87412493120064db95dc52cb981
+  revision: 88f622cea904c0111f0ecd6d303933e635ed945f
   branch: development
   specs:
-    vaadin-elements (0.3.0)
+    vaadin-elements (0.5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -15,7 +15,7 @@ GEM
       rack (~> 1.5)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
-    tilt (2.0.2)
+    tilt (2.0.5)
 
 PLATFORMS
   x64-mingw32
