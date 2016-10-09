@@ -24,7 +24,7 @@ post '/cards' do
 end
 
 post '/update' do
-  attribute = case params['id']
+  attribute = case params['id'].delete("\"'")
                 when 'card-type' then
                   'types'
                 when 'cmc' then
@@ -34,10 +34,10 @@ post '/update' do
                 else
                   raise "unsupported parameters #{params.inspect}"
               end
-  if params["value"].empty? then
+  if params["value"].delete("\"'").empty? then
     session[:filters][attribute].clear
-  elsif !session[:filters][attribute].include?(params['value'])
-    session[:filters][attribute] << params['value']
+  elsif !session[:filters][attribute].include?(params['value'].delete("\"'"))
+    session[:filters][attribute] << params['value'].delete("\"'")
   end
 
   puts "Current filters: #{session[:filters].inspect}."

@@ -6,7 +6,7 @@ GIT
     vaadin-elements (0.3.0)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -25,4 +25,4 @@ DEPENDENCIES
   vaadin-elements!
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
